@@ -1,0 +1,30 @@
+# --- Archivos temporales y logs de Vivado ---
+*.log
+*.jou
+*.str
+*.os
+*.zip
+.Xil/
+*.dir/
+*.pb
+*.rpt
+*.xml
+
+# --- Carpetas de proyecto locales (NO subir al repo) ---
+# Estas carpetas contienen resultados de compilación y datos de tu PC
+*.runs/
+*.hw/
+*.ip_user_files/
+*.sim/
+*.cache/
+*.srcs/utils_1/
+
+# --- Binarios generados (Bitstreams) ---
+# Opcional: si quieren compartir el bitstream final, comenten estas líneas
+*.bit
+*.bin
+*.mcs
+*.prm
+
+# --- Archivos de respaldo de editores ---
+*~
