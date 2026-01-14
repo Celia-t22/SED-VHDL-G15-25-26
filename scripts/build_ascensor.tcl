@@ -27,8 +27,8 @@
 #
 # 3. The following remote source files that were added to the original project:-
 #
-#    "C:/Users/USER/PROYECTO_ASCENSOR/.src/Top_Ascensor.vhd"
-#    "C:/Users/USER/PROYECTO_ASCENSOR/.xdc/Nexys-A7-100T-Master.xdc"
+#    "C:/Users/USER/PROYECTO_ASCENSOR/src/Top_Ascensor.vhd"
+#    "C:/Users/USER/PROYECTO_ASCENSOR/xdc/Nexys-A7-100T-Master.xdc"
 #
 #*****************************************************************************************
 
@@ -36,8 +36,8 @@
 proc checkRequiredFiles { origin_dir} {
   set status true
   set files [list \
- "[file normalize "$origin_dir/../.src/Top_Ascensor.vhd"]"\
- "[file normalize "$origin_dir/../.xdc/Nexys-A7-100T-Master.xdc"]"\
+ "[file normalize "$origin_dir/../src/Top_Ascensor.vhd"]"\
+ "[file normalize "$origin_dir/../xdc/Nexys-A7-100T-Master.xdc"]"\
   ]
   foreach ifile $files {
     if { ![file isfile $ifile] } {
@@ -533,3 +533,4 @@ move_dashboard_gadget -name {drc_1} -row 2 -col 0
 move_dashboard_gadget -name {timing_1} -row 0 -col 1
 move_dashboard_gadget -name {utilization_2} -row 1 -col 1
 move_dashboard_gadget -name {methodology_1} -row 2 -col 1
+
