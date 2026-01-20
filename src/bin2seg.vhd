@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 20.01.2026 08:26:39
+-- Create Date: 20.01.2026 08:11:24
 -- Design Name: 
 -- Module Name: bin2seg - Behavioral
 -- Project Name: 
@@ -16,6 +16,8 @@
 -- Revision 0.01 - File Created
 -- Additional Comments:
 -- 
+----------------------------------------------------------------------------------
+
 ----------------------------------------------------------------------------------
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;

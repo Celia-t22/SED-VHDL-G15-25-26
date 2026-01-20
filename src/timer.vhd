@@ -33,7 +33,8 @@ end timer;
 architecture Behavioral of timer is
     -- Constante para definir la velocidad. 
     -- 100,000 ciclos @ 100MHz = 1ms.
-    constant MAX_COUNT : integer := 10; --tiene q estar en 100000
+    --constant MAX_COUNT : integer := 10; --tiene q estar en 100000
+    constant MAX_COUNT : integer := 100000;
     signal count       : integer range 0 to MAX_COUNT;
     
 begin
