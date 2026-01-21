@@ -18,7 +18,6 @@
 -- 
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -42,9 +41,7 @@ port(
 
   -- Salidas
   motor_ascensor : out std_logic_vector(1 downto 0);
-  motor_puertas  : out std_logic_vector(1 downto 0);
-
-  inicio_tim1 : out std_logic  -- si no lo usas, luego lo quitamos
+  motor_puertas  : out std_logic_vector(1 downto 0)
 );
 end FSM;
 
@@ -101,7 +98,8 @@ begin
     case current_state is
 
       when S0_STDBY =>
-        if (BTN_Clean /= "0000") and (piso_destino /= p_actual) then
+        -- FIX: no uses piso_destino aquí, se actualiza 1 ciclo después del pulso de BTN_Clean
+        if (BTN_Clean /= "0000") then
           next_state <= S1_CERRAR;
         end if;
 
@@ -161,7 +159,6 @@ begin
     motor_ascensor       <= "00";
     inicia_TIM_CORTESIA  <= '0';
     inicia_TIM_STOP      <= '0';
-    inicio_tim1          <= '0';
 
     case current_state is
       when S1_CERRAR  => motor_puertas  <= "10";
@@ -175,4 +172,5 @@ begin
   end process;
 
 end Behavioral;
+
 
