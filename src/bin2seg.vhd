@@ -35,24 +35,24 @@ begin
     process(binary_in)
     begin
         case binary_in is
-            --NUMEROS
-            when "0000" => segments <= "1000000"; -- 0
+            --NUMEROS Y LETRAS
+            when "0000" => segments <= "1000000"; -- 0 / O
             when "0001" => segments <= "1111001"; -- 1
             when "0010" => segments <= "0100100"; -- 2
             when "0011" => segments <= "0110000"; -- 3
             when "0100" => segments <= "0011001"; -- 4
-            when "0101" => segments <= "0010010"; -- 5
+            when "0101" => segments <= "0010010"; -- 5 / S
             when "0110" => segments <= "0000010"; -- 6
             when "0111" => segments <= "1111000"; -- 7
-            when "1000" => segments <= "0000000"; -- 8
+            when "1000" => segments <= "0000000"; -- 8 / B
             when "1001" => segments <= "0010000"; -- 9
             -- LETRAS 
             when "1010" => segments <= "0001000"; -- A
-            when "1011" => segments <= "0000000"; -- B
             when "1110" => segments <= "0000110"; -- E
-            when "1101" => segments <= "0010010"; -- S 
             when "1100" => segments <= "1000001"; -- U
             when "1111" => segments <= "1110001"; -- J
+            when "0110" => segments <= "0000111"; -- T  
+            when "1110" => segments <= "0001100"; -- P 
             --APAGADO
             when others => segments <= "1111111"; -- Apagado para errores
         end case;
